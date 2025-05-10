@@ -1,0 +1,775 @@
+V7.0.8
+======
+-Updated to work with new NOAA weather URLs
+-Cosmetic fixes on weather print outs.
+-OOOI Times including touchdown report reliability improved by a small rewrite
+-CARD assumed temperatures have been fine tuned a bit more
+
+V7.0.7
+======
+-Fixes to CARD assumed Temperature
+
+V7.0.6
+======
+-Futher fixes to PDC
+
+V7.0.3
+======
+-Stopped installer deleting config file
+
+V7.0.2
+======
+-Fixed PRE DEP CLR not working any more with VATSIM changes
+-PRE DEP CRLNC SENT and SEND Caret works correctly
+-Once a clearence is acked, accept will stay in small font until it is replaced
+
+
+V7.0.1
+======
+-Migrated to New Server Infrastructure
+
+V6.1.1
+======
+-Message now displayed if Hoppie Send Fails
+-Error checking on Hoppie Destination Field
+-Fixed error where card would display the incorrect time on a Performance request
+-Fixed issue with Arrival message time format
+
+V6.1.0
+======
+-Resolved compatability issues with PSX 10.151/2 - Requires 10.152 or later.
+-All Dates and Times are now relative to PSX Time and not real time.
+
+V6.0.9
+======
+-Fixed bug where performance data is not generated when at extremes of performance charts
+-MACTOW Either comes from PSX or the MACTOW Entry if entered on Perf Print Out
+-If Single Digit Assumed Temp Returned the Text is padded to display in the correct column
+-Added Config File Entry DownloadVatsimATIS to allow disabling of VATSIM Data Download
+
+V6.0.8
+======
+-More stablity fixes
+-Changed INIT DATA REQ Behaviour, can now uplink without entering a flight number.
+
+V6.0.7
+======
+-Stop pages getting stuck in between FLT INIT and CREW
+-BACARS remains active even after reloading situation
+-Changes to stop BACARS disappearing with real CDU
+-Now Tied into ACARS L AC CB
+-Added Landing Report
+-ATIS Formats all updated
+-Added Landing score calculation
+-Final Flight report now in BA Format.
+-Changing BACARS page during INIT DATA REQ no longer causes strange things to happen.
+-Added Prelim Loadsheet after entering FOB and clicking Y
+-FLT INIT PRINT Report now accurate
+-Fixed LBS FOB Entry
+-Added Every Single BA Performance Correction Code
+	04  3 mm – 6 mm (0.1 – 0.25 in) Standing Water – Full Power T/O
+	05  7 mm – 10 mm (0.25 – 0.4 in) Standing Water – Full Power T/O
+	06  11 mm – 13 mm (0.4 – 0.5 in) Standing Water – Full Power T/O
+	07  3 mm – 6 mm (0.1 – 0.25 in) Slush – Full Power T/O
+	08  7 mm – 10 mm (0.25 – 0.4 in) Slush – Full Power T/O
+	09  11 mm – 13 mm (0.4 – 0.5 in) Slush – Full Power T/O
+	10  Compacted Snow – Full Power T/O
+	11  10 mm – 20 mm (0.4 – 0.8 in) Dry Snow – Full Power T/O
+	12  21 mm – 30 mm (0.8 – 1.2 in) Dry Snow – Full Power T/O
+	13  31 mm – 40 mm (1.2 – 1.6 in) Dry Snow – Full Power T/O
+	14  41 mm – 50 mm (1.6 – 2.0 in) Dry Snow – Full Power T/O
+	20  Braking Action Medium – Full Power T/O
+	21  Braking Action Medium to Poor – Full Power T/O
+	22  Braking Action Poor or Unreliable – Full Power T/O
+	31 1 A/C Pack On
+	36 FAM V Sys. Inop – Single Pack Operation
+	40 Autospoilers Inop
+	56 Full Power Take-Off
+	61 Landing Gear Extended – Full Power T/O
+	64 2 Brakes Inop – Deactivation Tool used
+	65 2 Brakes Inop – Line Capped/Brake Removed
+	66 Anti-Skid Inop – Full Power T/O
+	67 Demand Hydraulic Pumps 1 or 4 Inoperative
+	70  17 Percent Aft CG
+	71  21 Percent Aft CG
+	72 TO1 Thrust Rating
+	73 TO2 Thrust Rating
+
+V6.0.6
+======
+-Updated Message formats when printing
+-Print Prompt now changes when pushing print on uplinked message page
+-Tidy up of message printing
+-Stop PERF page randomly showing up on printing
+
+V6.0.5
+======
+-Removed CDU Sim Menu Change for Real CDUs as caused issues with new EFB
+-Reduced ACARS Report Submission time to 1 minute as we keep missing them
+-Updated Flight Board Update to better match new layout
+-ATIS Printouts now formatted correctly
+-ATIS now reads VATSIM datafile properly
+-ACARS Message Printing Format made more realistic
+-Fixed Doors Time
+-Flightboard now updates to GATE CLOSED on doors shutting
+
+V6.0.3
+======
+-Added Option to override PSX Time for Visuals Generators :-
+
+			Go to INIT/PRES FLT P2/2 and Enter the following in FLT TIME Box (will not override value in CDU)
+
+             M1 - Minus 1 hour from PSX Time (changes as time passes)
+			 P2 - Plus 2 hours from PSX Time (changes as time passes)
+			 1230 - Set time to 1230Z (will not change)
+
+-Added .ToUpper() on ACARS Messages to stop off spec messages breaking the CDU
+-Reduced blanking time to try and stop real CDU hanging
+-Fix URL encoding for emails with + signs in them
+
+V6.0.3
+======
+-Added Sim Menu Option for those running real CDU's with PSX.NET (Ask Gary for details)
+
+V6.0.2
+======
+-Many fixes for when running real CDU's with cockpit concept MCDU Board
+-Fixes to screen blanking to use proper PSX spec rather than a bodge
+-Minor UI fixes
+-Fixes to ACARS Menu Ordering
+-Defects menu removed as per final BA ACARS release
+-Temp Box now 2 characters not 3
+-Fixed issue with more than 99 tonnes of fuel causing issues on INIT/PRE FLT 2/2
+-Added Doors Closing Times to INIT/PRES FLT
+
+V6.0.1
+======
+-Bug fix for TLS Issues preventing Weather from being obtained
+
+V6.0.0
+======
+-Updated to use VATSIMs new V3 data feed as the old one will be removed soon.
+-Jumped on the 2021 Dark mode bandwagon
+
+V5.1.2
+======
+-More Error checking on ATIS Printing
+-More Debug on ATIS printing
+-Ability to turn off Landing score in config file
+
+V5.1.0
+======
+-Compatabile with PSXInfo Landing Data
+-Logs landing data to simfest dispatch/planning system for top gear leaderboard
+-Removes PSXInfo score after 15 seconds from EICAS
+-Landing Pilot is defaulted to Captain incase crew forget to fill in
+-Landing Pilot now in the correct column on CDU
+
+V5.0.9
+======
+-Updated for SimSwitch NAME function
+-Updated to fix Typo in DEFECT REP that shows up when using real CDU via ARINC
+
+V5.0.8
+======
+-Changed all Hoppie Position, Reports etc to send to the LongAirlineCode, not always BAW
+
+V5.0.7
+======
+-Fixed missing file in installer that prevented Weather/AIS from returning
+
+V5.0.6
+======
+-Internal Test Version
+
+V5.0.5
+======
+-Wind Data Now Imported into PSX Wind Corridors from CIRRUS
+-PSX Wind Corridor settings set when running BACARS to use them with random variation
+-Fixed incorrect time showing on CARD Print Out
+-Fixed incorrect time on arrival message
+
+V5.0.4
+======
+-Update to use VATSIM JSON DataFeed
+-Fix BAV Position Reporting
+-VATSIM ATIS now in uppercase
+-ATIS now will always return from VATSIM if requested rather than come back blank
+
+V5.0.3
+======
+-Remove NG Style FLTINIT
+
+V5.0.2
+======
+-Fixed Oceanic Remarks not working
+-Fixed WEATHER AIS Page getting stuck
+-METAR/ATIS reports now tidied up
+
+V5.0.1
+======
+-Added validation on ETE to ensure theres no Dots in it Should be format HHMM
+-Support added to send flight reports to BAV (refer to BAV forums on how to enable this)
+-Added BAV Position Update
+-Fixed Loadsheet pax figures only working for Gary.
+-Adding a Sensibo API key will display room temperature on EICAS as U/D Figure
+-Only Send Arrival Message if an arrival stand is returned
+-BAV position now updates every 5 seconds
+-BAV position update now uses FLT INIT Dest/Dept instead of FMC values
+
+V5.0.0
+======
+-Revisions on Final Loadsheet Now show // next to the changed items
+-Loadsheet PAX Figures now match those in Dispatch Center Loadsheet if available
+-Wind Uplink Bodge Removed
+-Wind info from flightplan downloaded from web server now in preperation for integration with dispatch and NG FMC when it comes. 
+-Added Delay to FLT INIT 1/2 and 2/2 Page
+-Added Delays to all pages
+
+
+V4.1.1
+======
+-Attempted to solve issue of ZFW not changing properly in PSX
+-Update to enter email address into ActiveFlight Database so everyone can use flightboard and iPad App
+
+V4.1.0
+======
+-Removed bbbb's from the flight report
+-Arrival Information Message Generated during descent from Dispatch
+
+V4.0.9
+======
+-Updated Navadata for Perfomance Calculation to AUG18.
+-Fixed Prefuel Override when using a number with decimal places
+-Changed Display of ACARS Uplinks to use small font.  
+-FOB Value validation Added
+-FOB Value will now add a decimal point if not added
+-Unchecking Ready to board will now stop prefueling
+
+V4.0.9
+======
+-Fixed Line Spacing on ACARS Messages sent via the dialog in BACARS
+-Updated PSX Dispatch Schedule to work with flights that cross midnight UTC
+-Updated CPDLC for more error checking and to use correct message types and ID's
+
+V4.0.8
+======
+-Ability to Acknowledge PDC Requests that come in from VATSIM
+-VATSIM PDC Format updated slightly to be 100% compatable with the vSMR plugin
+-PDC Simulation is now turned off by default, turn it on in the config file if you require it
+-Further Updates to ACARS Message Handling
+
+V4.0.7
+======
+-Internal Changes
+
+V4.0.6
+======
+-Resolved Issue With ACARS Chime Only Working on first ACARS message Received by BACARS
+-ACARS Chime will now chime when using the TELEX message send feature.
+-Telex Send now shows as a saved uplink and is handled like a normal ACARS message
+
+V4.0.5
+======
+-Fixed bug with PSX ZFW varying wildly after start
+-Final Loadsheet MACTOW now correct even if using an uplink of crew data
+-Fixed no loadsheet if FOB not entered on ACARS Page
+-FOB Figure now overrides Prefuel value so you can add to flightplan fuel and then prefuel it pressing 'ready to board'
+
+V4.0.4
+======
+-Setting Ready to board to Yes will now start prefuel in PSX (Can be turned off in Config File is Required)
+-Intersection selected state no longer gets overwritten, so you can actually request none intersection card again
+-Leading Zero Added to Temperature if less than 2 characters on CARD
+-Card now accepts M or - for temperature
+-Perf Request Always Opens on Page 1
+-Perf Req Sent Prompt now appears in small characters and cannot be resent before previous CARD appears
+
+V4.0.3
+======
+-All 4 Perf Correction codes are now reset when CARD resets.
+-Solved issue where Weather page can get stuck on Sent and not reset
+
+V4.0.2
+======
+-Changes PSX CG even if 'Cg Varies with fuel distribution' is set
+
+V4.0.1
+======
+-PERF REQ Page is always blank when opening as per real aircraft
+-Changed ACARS automatic Report timer to 5 minutes to allow time for Landing Pilot to be entered.
+-Ready to Board Prompt Works
+-Acars Report Sending Reset Acars System
+-Acars report send only works after an in time and when at a standstill.
+-WXR/AIS page tided up to show sent caret as well as fixed a long standing bug where double clicking send causes a WXR request failure
+
+V4.0.0
+======
+-Now takes over the PSX ACARS SubSystem, Up versioned to V4 to celebrate the fact its reliable enough to not require a fall back :-)
+-Prefuel is now set upon performance uplink
+-Alternates Database Updated (Thanks Simon Kelsey!)
+-Wind Uplink from Dispatch Centre Now Built into BACARS, Doesn't Require PSX.NET (Thanks Benny!)
+
+V3.8.4
+======
+-GUI updated to show misconfiguration items in red
+-Uplinks will no longer all fail if one of them fails.
+-Clicking of the Hoppie Icon allows you to send an ACARS message.
+
+V3.8.3
+======
+-Flight number nolonger adds leading zeros meaning if you put BA175 into the dispatch website it will work instead of trying to find BA0175 
+-Added configuration options on the GUI
+-Route file is now stripped of cost index, alt and runway as per real world
+
+V3.8.1
+======
+-Added Tiles to show status of route uplinks 
+-Now Sets MacTow from PSX Dispatch Uplink
+
+V3.7.0
+======
+-Internal Changes
+
+V3.6.0
+======
+-Various Preperations for PSX Dispatch Center
+-Hoppie interaction now on uses 3 letter airline code for both ACARS flight Number and CDU Flight Number
+-Sets ZFW based on Dispatch Center flight plan ZFW
+-Pads uplinked crew data to 5 characters
+-Supports DataLink Route and Winds from PSX.NET.Dispatch
+
+V3.5.0
+======
+-CARD Failure now states SYSTEM ERROR CONTACT FTD as per real world BA
+-ZFW Now changes by a random amount simulating loadsheet adjustments
+-ACARS Messages now deleted on FLT INIT Flight Number Change
+-Flight Number entry can now include the airline code
+-Missing Runway Label on PERF REQ Page 2 added back
+-2 More Perf Correction Code Entries added in line with NGFMC
+-Added Estimated MACTOW Field to PERF REQ P2
+-Ready to Board Added to FLT INIT
+-Perf Codes entered with 1 character now pad to 2 characters
+-Updated Init Pages to match NGFMC
+
+V3.4.2
+======
+-ACARS Message Printing now says who its from
+
+V3.4.1
+=======
+-Support for Crew Data Init from Sql Table
+-TOR now TORA on print out
+
+V3.4
+=======
+-Support for Active Flight in SQL Database for Simfest Sim
+
+V3.3.1
+=======
+-Updated to work with new Performance DLL giving a common code with web card.
+-Updated Vis Section to have upper case units not lower case
+-All ACARS messages are now printed by default
+
+V3.3.0
+=======
+-Removed Wind Uplink Handler.. Became very annoying and only useful on long flights
+
+V3.2.2
+=======
+-Longer Delay on Wind Uplink Changes
+-Resolved Broken ATIS Generation from V3.2.1
+-BACARS menu Disappearing found to be legacy code in PSX_JOY.. Resolved
+-Performance Message Format corrected as per examples from BA
+-Performance MSG visibility data now correct if in database.
+-Correctly shows G ENG not H.
+
+V3.2.1
+=======
+-Added delay to ATIS generation
+-ZFW on Loadsheet should now be correct
+-Click on PSX Connected Tile now resets ACARS Menus if Bacars 'gets stuck'
+
+V3.2.0
+======
+-Added Perf Code 82 to reduce TOPL by 87 KGS if IFE antenna Fitted
+-Updated TOPL on CARD to display 1 decimal place
+-Notification ACARS message to tell you Wind updates are available.
+-Fix for Random IN times being 1 minute after out times
+
+V3.1.0
+======
+-Now received ACARS messages whether destined for ACARS FLT NO or FMC FLT NO
+-Crew Data Init Request Works again
+-If ACARS message is not on page one and you try to go to the next page it no longer shows a blank screen
+-When removing ACARS messages if the page is cleared then you are no longer left on an empty page of acars messages
+-Selecting < stored downlinks shows an invalid entry rather than not doing anything
+-Defect Reporting Pages Added, These save off to Cloudcars
+-Added simulation of 'PA IN USE' when seatbelt signs turned off for first time (Cabin service announcement), and when turned on (please fasten seatbelts etc)
+-Added debug output of how many messages sent to PSX a sec
+-debug.txt now logging any exceptions which occur
+-OOOI times now work even when spanning across midnight
+-Fuel Remaining now displays LBS correctly if LB selected in Config File
+-PDC Request via Hoppie Telex proved to be working correctly
+-ACARS messages which are received with more than 24 characters a line are now chopped up by BACARS to ensure they display.  This was seen when testing 
+ Clearences as above, as they get put on one long line.  The message interestingly could still be printed
+-Clearences issued by the euroscope plugin are now received and parsed correctly with success/standby/not avail too
+-Automatic PDC message now uses FMC flight number/vatsim callsign to maintain consistency
+-Defect Rep Menu now returns to acars menu when ACARS prompt selected.
+
+V3.0.5
+======
+-Updated PERF REQ pages to match latest photos of BA 744s CDUs sent via twitter
+-Fuel Remaining on ACARS Report No Longer Blank
+
+V3.0.4
+======
+-Now Uses FMC FltNumber for any communication with Hoppies ACARS which is your ATC callsign and not the actual BA flight number
+-PDC should now work properly when online
+
+V3.0.3
+======
+-Updated In Time to Come From Engine Shutdown not doors opening
+-Updates to Flight Board for World Flight
+
+V3.0.2
+======
+-Added Sesma Events on Print out (not in CloudCars)
+	-Monitors, Gear, Flaps, Vref at 2000ft,1500ft or 1000ft gates in line with stable approach criteria
+
+V3.0.1
+======
+-More tidying up of playing nicely with other PSX Addons
+-Keyboard no longer overrides other addons
+
+V3.0
+====
+-Removed Features Now Controlled by PSX.NET
+-UI Tidy Up
+-Now Uses Touchdown Data from PSX
+-Added Support for CloudCars V1.0
+-Added Support For Flightboard V1.0
+
+V2.2.2
+======
+-Updated VATSIM ATIS Datafeed URL
+
+V2.2.1
+======
+-New config Item Disable QS191 (Qi) which stops bacars breaking PSX.NET.Push
+
+V2.2.0	
+======
+-Release Version
+
+V2.1.9
+======
+-Flightboard Updating Added For Simfest Sim
+-Flightboard Updating Now supports multiple users
+-Twitch Streaming Remarks Attribute in ACARS class to allow twitch program to pick up Streaming Option
+-Twitch Streaming Camera attribute in ACARS class to allow camera switching from within the CDU
+-Minor Changes in the Performance Message format to match the later BA reports
+
+V2.1.8
+======
+-Ensures ACARSINFO.XML updated regulally to work with PSX.NET.Map
+
+V2.1.7
+======
+-Internal Updates
+
+V2.1.6
+======
+-ACARS Data Now Reset on First Load
+-Fixed Issue where if a PDC has been requested before an oceanic the oceanic will not come through
+
+
+V2.1.5
+======
+-Final Fixes applied to Weather/ATIS Requests causing issues with data corruption
+-Oceanic Clearances now generated if config file setting 'AutoOceanic' is set (set by default)
+
+
+V2.1.4
+======
+-Fixed bug where PSX Data could be corrupted
+-UTC Time now reported from Simulator Time and not PC Clock Time (for MichaDF)
+-Final Loadsheet now supports lbs properly (for Torrence)
+-New Config Entry 'AutoPDC' which will simulate a PDC clearence (for Tango4)
+
+V2.1.3
+======
+-Added Fix for QNH being invalid
+
+V2.1.2
+======
+-Fixes Loadsheet TOW, FUEL and ZFW Calculations which didn't quite add up
+-Fuel onboard figure is now a figure taken from the dispatcher at off blocks rather than live from the EICAS.
+
+V2.1.1
+======
+-Acars and Card Data now reset on Power loss to the ACARS sub system
+-Acars Dept and Dest now update with FMC Dept Dest Updates
+-Input validation on Wind Speed / Direction improved
+-Fixed Issues where sent ACARS Messages were not being split properly into multiple lines
+-Oceanic Clearence Request now avaialteamspeakble
+
+V2.1.0
+======
+-Remarks on PDC no longer insert ---- after text
+-METARS now include TAFS
+-PSX ETA Now Included in Hoppie Progress reports
+-ACARS Messages clear after 1 minute from EICAS
+-Fixed Bug where seatbelts were not detected properly so the cabin would be secure even though the signs wern't on
+-Fixed a silly bug where skype wouldn't work on any other computer but my own!
+-Fixed a bug in PDC Clearence where the flight number would become the Destination airport.
+
+V2.0.9
+======
+-Airline Code Now configurable in Config File (two letters)
+-Acars Prompt now configurable in config file (Suggest 6 characts or less)
+-Resolved a couple more errors which can prevent a performance figure being generated (aka Doug Snows bug report)
+-Fixed Skype End and Accept Call.  Configure Advanced > Hotkeys in Skype for Answer CTRL+PGUP and HangUp CTRL+PGDN in Skype
+-Config File Entry UnitsofMeasure Now allows LB to be used.
+-Acars PDC Clearence Now Available
+
+
+V2.0.8
+======
+-FLTINIT page 2 logic now based on ACARS OUT Time
+-Removed RS232 Cabin Call and Motu8 Support from the Module as this is now in PSX.NET
+-More Code Preperations into joining the PSX.NET project, this will be the last standalone
+ version of BACARS which will be merged into the PSX.NET project.
+-Navigation Database is now included as agreed with Navigraph who allow us to ship
+ an out of date Navigation Database.  An updated version can be downloaded from www.navigraph.at
+ The author ackowledges TOPCAT who their creation of the database format and recommend purchasing TOPCAT
+ for performance calculations for the rest of their FS Fleet and PFPX for PSX Flight Planning.
+ -Acars Dispatch UI Updated to show positions of ACARS aircraft
+ -You can now view all cloudcars reports from the Acars UI.
+
+V2.0.7
+======
+-SIGMETS Functionality Added
+-Passenger Figures no longer more than the capacity of BA Aircraft!  Oops
+-TOW will not longer be bbb.b when MENU button is pressed before Final Loadsheet is recieved.
+-If ACARS FLT INIT Data has been entered then default page for FLT INIT is 2/2
+-ACARS TO field now 7 characters
+-ACARS Free text Now validates line length and to length
+-<ACARS MENU Prompt on FreeText Page 2 now works
+-Page x/y Prompts on the following pages now corrected into small font
+-CDU Page Titles are now actually in the middle of the screen rather that one character to the right
+-Oceanic Clearence TO box now only 8 characters
+-Oceanic Entry Point Box now 5 characters
+-ACARS Message OLD/NEW text no longer indented on truncated messages
+-METS Now also includes the Requested Airport as well as the alternates
+-FLT INIT REQ Response no longer shows as a random uplinked message
+-Performance Figures now take longer to calculate just like real life
+
+V2.0.6
+======
+-(B1) Menu Page No Longer Corrupt on Hitting MENU Key
+-(B2) Card Now Arrives as an ACARS Message too
+-(Bx) ERASE Button on WXR/AIS Now Clears the IDENT 
+-Clicking an Uplinked Message will take you to Page 1 of uplinked message if a previous one has already been opened on a further page.
+-(B3) Removed Random <MENU Option from the SATCOM Menu
+-(B4) Weight Balance Request Will now clear on startup to stop seeing SENT> Caret on first attempt
+-(B5) BA removed from Oceanic and 
+ Request Pages
+-(B6) METS No Longer Sent When MET Only Selected
+-(B7) METS No Longer hangs is Airport isn't in Alternate Database
+-(B8) ACARS FLT INIT Page Pre Populated with DEPT and DEST If RTE Activated
+-ACARS Time In Randomly Appearing has been resolved
+-Free Text Summary No longer includes any blank lines in its summary page
+-External Power on Sim Page Now Operates both EXT PWR 1 and EXT PWR 2
+-Tidy up of BACARS Dispatch Client
+
+V2.0.51
+======
+-METS functionaility available based on Resources\Alternates.db 
+
+V2.0.5
+======
+-Can now recieve more than 5 message uplinks rather than before when after 5 no more new messages appeared
+-Card Performance DLL update to deal with new 1000ft tables
+-Can now delete Messages
+-Can Read/Delete Uplinked Messages with either Left or Right LSKs
+-ATIS/WXR Automatically Prints on Receive
+-ACARS MESSAGE EICAS Memo Now Works on AIS and Messages
+-ACARS MESSAGE MEMO Clears Upon Viewing Uplinked Menu
+-Non Functioning WX/AIS Now in Small Text
+-ATIS Contains PSX D-ATIS As well as VATSIM ATIS
+-Message Uplink Menu now reads all messages and allows scrolling through uplinked messages with NEXT and PREV Page Keys
+-ACARS Final Loadsheet is now sent through as an ACARS Message with <ACCEPT Prompt to accept loadsheet
+-ACARS Messages can go on to more than 2 pages now
+-Fuel Onboard Figures Now Provided on Loadsheet
+
+V2.0.4
+======
+-No longer trys to send data on a closed socket (internal)
+-Corrected formatting of V speed table
+-WXRAIS Uplinks now show as 'METAR UPLINK' instead of a preview of the message in the uplink menu
+-UI Cross Thread exceptions mostly fixed (internal)
+-Now automatically tries to copy the performance database if it doesn't exist.
+-ACARS Final Report will be sent once on blocks 10 minutes after engine shutdown (Needs Testing)
+-Includes latest perf.dll which now supports pressure altitudes up to 10,000ft
+
+V2.0.3
+======
+Much more error checking against the data passed to and from Btriple7's Perf.DLL as it doesn't seem to do any :-)
+KSEA and any other airports which provide a decimal point in the runway heading now work
+If CARD Data is invalid the program will no longer hang, it will just print an error
+Once CARD has been recieved the SENT> Caret now becomes SEND> to enable a resend of perf req
+
+V2.0.2
+======
+No longer hangs when trying to calculate perf data for an airport below sea level
+Removed options to replace PSX ACARS menu as this didn't work very well.
+Error Handling added incase of PSXPerf.DLL failing to compute a value
+
+V2.0
+=====
+Top Cat Replaced by PSX Perf Modules
+Intersections Now Supported in CARD Data
+You will need to copy an existing TOPCAT Performance Database from c:\programfiles(x86)\commonfiles\topcat to the root of 
+PSXBACARS install in order to get the runway database for performance data calculation (note TOPCAT is not called)
+
+
+V1.96
+=====
+Card now Clears when leaving PERF REQ Page as per real aircraft
+Card Entries now blank screen during processing in line with real aircraft
+Option to override PSX Default ACARS - Not Supported at this stage.
+Using the PERF REQ page and then other pages in the FMC should no longer cause overriding behavour
+Will Now open without TOPCAT being installed but the Performance Data REQ will no longer work
+Fixed "Invalid Entry" Eror when going back into SIM page after first open
+Imports TOPCAT Database Files in preperation for Bennys Perf Data
+Loading now Asyncronous to speed up loadtimes
+METS now works
+
+V1.95
+====
+RS232 Interface Added for Cabin Call Panel, just hook up pins 6/1/5 up to a USB FTDI Cable to make a real 747 cabin call panel work.
+
+V1.91
+====
+WT/BALANCE only sends if Selected else invalid entry
+ACARS Reports now Saved on CLOUDCARS Logbook (www.psxaddons.com/cloudcars) - WIP still
+Decimal seperator of "," now works for those countries that use it.
+
+V1.8
+====
+Fixed Button Handling code to stop pages overriding each other
+Updates Vpilot Volume to that of the VHF L selector on the right ACP.
+Uplinked Messages now split on ^ character
+Updated Dispatch Station to Send ACARS Messages too
+Menu Handling now no longer skips 2 menus back.
+Crew Details can now be overwritten by user
+VATSIM ATIS and MET now received as a TELEX message
+TELEX Messages now printable
+Stored Uplinks now overwrite older messages
+Dispatch Client now support recieving of messages
+Missing 5th Line of Acars Menu Added
+Perf Req now on LSK6 as per real BA CDU
+WT Balance Menu Now Working (Need to work on what actually gets send back)
+Stored messages can be deleted with DELETE in scratchpad and then LSK the Message
+
+V1.7
+====
+ACARS OOOI Report Now Shows Landing Rate
+ACARS OOOI Report Now Printable
+Cabin Ready Message On Descent
+ACARS WXR/AIS Page now does VATSIM ATIS and MET
+
+V1.6
+====
+No longer converts B's to boxes on Crew Details
+If Weight Below 265,000 then table now shows same weight but multiple choices
+If V1 is higher than PSX VR then limit V1
+Data Validation fixed on Runway (accepts 1L as well as 01L and adds leading zero)
+Data Validation Fixed on TOW including . places
+Resolved issue where DOOR state gets stuck in <CLOSE
+CARD is now saved between sessions
+
+V1.5
+====
+ACARS Logon Code Now in GUI
+VR and V2 speeds now calculated outside of TOPCAT to match PSX/Real World Values
+Fixed OOOI Flight Time Calculation
+No longer spaming hoppies acars with updates every second
+
+V1.4
+====
+TELEX Messaging Working
+
+V1.3
+====
+Complete rewrite of menu and button handling
+Added BA ACARS Menu
+BA Flight Init
+ACARS Dispatcher Created
+Init Data Now Works
+OOOI Info to Hoppies Acars
+TELEX Message Uplink and Downlink to Hoppies ACARS System
+
+V1.2
+=====
+Internal Version
+
+V1.1
+====
+Sim Menu Completed
+
+V1.0
+====
+New GUI
+App.Config Save issues Resolved
+Option to turn on and off different parts of the application
+Fixed Menu items being overwritten
+Added Skype Menu
+Added Sim Menu
+
+V0.7
+====
+Various display changes to keep Britjet happy
+
+
+V0.6
+====
+Split CARD Into 2 Pages
+Changed qnh limits to match manual of 900-1100
+Fixed Runway displaying carets on P2
+Wipes <SEL> selection when going to page 2 and back to 1
+Added Performance Restrictions Page from BA.CSV
+Fixed formatting on QNH/TEMP Line
+Fixed situation where lines could be wider than the paper
+
+V0.5
+====
+Added Cabin Ready On Departure
+Stops Pushback after 1 minute
+Data Validation
+
+V0.4
+====
+Loadsheet Attempt 1
+
+V0.3
+====
+Errors Gracefully on invalid ICAO/Runway
+TOPL no longer bollox
+Reg Number Now Comes from PSX
+Flight Number Now Comes from PSX
+
+V0.2
+====
+Icon Change
+Minimise on Startup Now Works
+Detects TOPCAT install location
+No Longer tries to take over ACARS Subsystem... oops
+MACTOW Calculated from PSX
+Added Progress Bar to show calculation progress
+
+V0.1
+=
+
+Initial Release

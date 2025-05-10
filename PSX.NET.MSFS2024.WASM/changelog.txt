@@ -1,0 +1,44 @@
+Client
+######
+
+20.0.4
+======
+-Fixes Altitude Issues on VATSIM
+-Time sync only occurs when Captains Clock button is pressed on glareshield to prevent weird MSFS2024 things happening with live weather.
+-Requires WASM Aircraft V2.0.4
+
+20.0.3
+======
+-Option added to Client Config File to disable TimeSync 
+
+20.0.2
+======
+-Requires SU1
+-Time Sync now works again following asobo bug fixes
+
+
+20.0.1
+======
+-Rewritten WASM Module with 2024 SDK to improve performance
+-Updated the Aircraft Config Files to match 2024
+-All Lights now use MSFS2024 lighting and function correctly.
+-WASM Module Freeze and Ground Altitude Functions now work correctly, no need to pause MSFS 2024 manually like we did in testing.
+-New Setting in Configuration File option <AutomatedLoadIntoFlight> which can be set to true.  The Client will then monitor MSFS startup, activate the window and use keystrokes to load MSFS into a flight.  Only enable this when you have MSFS running as you want for example on a standalone PC.
+
+20.0.0
+======
+-Standalone Installer so just extract ZIP file to any location so you can leave your 2020 version untouched
+-Disables Time Sync as this breaks Weather and doesn't seem to set properly in 2024, recommend flying with RealTime/Real Weather set
+-Recompiled in .NET9 for performance improvements
+-Recompiled with latest MSFS SDK
+
+---------------------------------
+
+Router
+######
+
+v11.0.0
+=======
+-Sends Transition Level/Altitude information for WASM Module 20.0.4
+
+
